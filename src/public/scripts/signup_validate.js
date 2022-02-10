@@ -6,7 +6,7 @@ const regEx = {
     last_name: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, //Solo se permiten, letras, espacios y acentos
     mail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
     identification: /^\d{7,14}$/, // 6 a 14 numeros.
-    password: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/ // Mínimo 8 dígitos, con una letra, un número y un caracter especial
+    password: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&/])[A-Za-z\d$@$!%*#?&/]{8,}$/ // Mínimo 8 dígitos, con una letra, un número y un caracter especial
 };
 
 const fields = {

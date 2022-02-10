@@ -3,7 +3,7 @@ const form = document.getElementById('login-form');
 
 const regEx = {
     mail: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
-    password: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/ // Mínimo 8 dígitos, con una letra, un número y un caracter especial
+    password: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&/])[A-Za-z\d@$!%*#?&/]{8,}$/ // Mínimo 8 dígitos, con una letra, un número y un caracter especial
 };
 
 const fields = {
