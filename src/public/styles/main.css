@@ -2,38 +2,68 @@
     --main_gradient: linear-gradient(to right, #fc00ff, #00dbde);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
 
-.btn{
-    padding: 0.4em 0.6em;
+.alert {
+    position: relative;
+    background-color: transparent;
+    padding: 4px;
+    margin: 12px 0px 4px 0px;
+    background-color: white;
+    transition: all 0.4s ease;
+}
+
+.alert--ward {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+}
+
+.alert--success {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
+.alert__close {
+    border: transparent;
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    padding: 2px;
+    background-color: rgb(224, 224, 224);
+    border: 1px solid rgb(187, 187, 187);
+    border-radius: 4px;
+}
+
+.btn {
+    padding: 0.8em 0.6em;
     text-transform: uppercase;
     cursor: pointer;
     background-color: white;
     border: 1px solid white;
     color: white;
-    border-radius: 12px;
+    border-radius: 16px;
 }
 
-.btn--block{
+.btn--block {
     width: 100%;
     display: block;
 }
 
-.btn--primary{
+.btn--primary {
     background: var(--main_gradient);
 }
 
-.btn--form{
+.btn--form {
     margin: 12px 0 8px 0;
 }
 
-.login-root, 
-.signup-root{
+.login-root,
+.signup-root {
     background: var(--main_gradient);
     min-width: 100%;
     min-height: 100vh;
@@ -42,8 +72,8 @@
     justify-content: center;
 }
 
-.login, 
-.signup{
+.login,
+.signup {
     width: 320px;
     padding: 0px 16px 16px 16px;
     border-radius: 24px;
@@ -51,26 +81,47 @@
     border: 1px solid rgb(163, 163, 163);
 }
 
-.login__title, 
-.signup__title{
+.login__title,
+.signup__title {
     text-align: center;
     margin: 16px 0;
     border-bottom: 1px solid rgb(209, 209, 209);
 }
 
-label{
-    margin-bottom: 4px
+label {
+    margin-bottom: 4px;
+    font-weight: lighter;
 }
 
-.label--block{
+.label--block {
     display: block;
 }
 
-.input--fw{
+input:focus {
+    outline: none;
+    border: 1px solid #00dbde;
+}
+
+.input--fw {
     width: 100%;
     padding: 8px;
     border-radius: 12px;
     margin-bottom: 8px;
     background-color: rgb(243, 243, 243);
-    border: 1px solid rgb(211, 211, 211) ;
+    border: 1px solid rgb(211, 211, 211);
+}
+
+.login__redirect,
+.signup__redirect {
+    text-align: center;
+    font-weight: 300;
+}
+
+.login__redirect a,
+.signup__redirect a {
+    font-weight: bold;
+    color: #00dbde;
+    text-decoration: underline;
+    text-transform: uppercase;
+    cursor: pointer;
 }
