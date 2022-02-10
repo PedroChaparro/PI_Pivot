@@ -22,26 +22,55 @@
 
                 <h1 class="login__title">SIGNUP</h1>
 
-                <form method="post" action="/signup">
-                    <label class="label--block" for="user_first_name">First Names</label>
-                    <input class="input--fw" type="text" name="user_first_name" placeholder="Your first name here" />
+                <form method="post" action="/signup" id="signup-form">
 
-                    <label class="label--block" for="user_last_name">Last Names</label>
-                    <input class="input--fw" type="text" name="user_last_name" placeholder="Your last name here" />
+                    <div class="form-group" id="user_first_name-group">
+                        <label class="label--block" for="user_first_name">First Names</label>
+                        <div class="form-group__input">
+                            <input class="input--fw" type="text" id="user_first_name" name="user_first_name" placeholder="Your first name here" />
+                        </div>
+                        <p class="form-group__error-message">Los nombres solo pueden contener letras.</p>
+                    </div>
 
-                    <label class="label--block" for="user_identification_document">Identification Number</label>
-                    <input
-                        class="input--fw"
-                        type="number"
-                        name="user_identification_document"
-                        placeholder="Your identification number here"
-                    />
+                    <div class="form-group" id="user_last_name-group">
+                        <label class="label--block" for="user_last_name">Last Names</label>
+                        <div class="form-group__input">
+                            <input class="input--fw" type="text" id="user_last_name" name="user_last_name" placeholder="Your last name here" />
+                        </div>
+                        <p class="form-group__error-message">Los apellidos solo pueden contener letras.</p>
+                    </div>
 
-                    <label class="label--block" for="user_email">Email</label>
-                    <input class="input--fw" type="email" name="user_email" placeholder="example@domain.com" />
+                    <div class="form-group" id="user_identification_document-group">
+                        <label class="label--block" for="user_identification_document">Identification Number</label>
+                        <div class="form-group__input">
+                            <input
+                                class="input--fw"
+                                type="number"
+                                id="user_identification_document"
+                                name="user_identification_document"
+                                placeholder="Your identification number here"
+                            />
+                        </div>
+                        <p class="form-group__error-message">La identificación solo permite números, sin signos de puntuación.</p>
+                    </div>
 
-                    <label class="label--block" for="user_password">Password</label>
-                    <input class="input--fw" type="password" name="user_password" placeholder="********" />
+                    <div class="form-group" id="user_email-group">
+                        <label class="label--block" for="user_email">Email</label>
+                        <div class="form-group__input">
+                            <input class="input--fw" type="email" id="user_email" name="user_email" placeholder="example@domain.com" />
+                        </div>
+                        <p class="form-group__error-message">El correo electrónico no es válido.</p>
+                    </div>
+
+                    <div class="form-group" id="user_password-group">
+                        <label class="label--block" for="user_password">Password</label>
+                        <div class="form-group__input">
+                            <input class="input--fw" type="password" id="user_password" name="user_password" placeholder="********" />
+                        </div>
+                        <p class="form-group__error-message">La contraseña debe contener mínimo 8 caracteres y debe incluír un número y un caracter especial</p>
+                    </div>
+
+                    <p class="form__error-message">Por favor, rellene el formulario correctamente antes de realizar el envío.</p>
 
                     <input type="submit" value="ENVIAR" class="btn btn--primary btn--block btn--form" />
 
@@ -51,6 +80,7 @@
         </div>
     
         <script src="/scripts/alerts.js"></script>
+        <script src="/scripts/signup_validate.js"></script>
         <script src="https://kit.fontawesome.com/5023e2a492.js" crossorigin="anonymous"></script>
 
     </body>

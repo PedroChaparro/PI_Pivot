@@ -107,7 +107,7 @@ label {
 
 input:focus {
     outline: none;
-    border: 1px solid #00dbde;
+    border: 2px solid #00dbde;
 }
 
 .input--fw {
@@ -117,6 +117,56 @@ input:focus {
     margin-bottom: 8px;
     background-color: rgb(243, 243, 243);
     border: 1px solid rgb(211, 211, 211);
+    outline: none;
+    border: 2px solid rgb(226, 226, 226);
+}
+
+.form-group--correct input{
+    outline: none;
+    border: 2px solid rgb(0, 228, 0);
+}
+
+.form-group--correct label{
+    color: rgb(0, 228, 0);
+}
+
+.form-group--incorrect input{
+    outline: none;
+    border: 2px solid rgb(255, 70, 70);
+}
+
+.form-group--incorrect label{
+    color: rgb(255, 70, 70);
+}
+
+.form-group__error-message{
+    font-weight: lighter;
+    color: red;
+    text-align: justify;
+    font-size: 14px;
+    margin-bottom: 8px;
+
+    /*Solo se muestran si hay un error*/
+    display: none;
+}
+
+.form-group__error-message--active{
+    display: block !important;
+}
+
+.form__error-message{
+    background-color: rgb(255, 176, 176);
+    border: 1px solid rgb(255, 78, 78);
+    text-align: justify;
+    font-weight: lighter;
+    padding: 8px;
+
+    /*Solo se muestra si hay un error*/
+    display: none;
+}
+
+.form__error-message--active{
+    display: block;
 }
 
 .login__redirect,
