@@ -47,11 +47,17 @@
     border: 1px solid white;
     color: white;
     border-radius: 16px;
+    text-decoration: none;
 }
 
 .btn--block {
     width: 100%;
     display: block;
+}
+
+.btn--center{
+    margin: 0px auto;
+    margin: 12px;
 }
 
 .btn--primary {
@@ -63,11 +69,13 @@
 }
 
 .login-root,
-.signup-root {
+.signup-root, 
+.welcome-root {
     background: var(--main_gradient);
     min-width: 100%;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
@@ -124,4 +132,11 @@ input:focus {
     text-decoration: underline;
     text-transform: uppercase;
     cursor: pointer;
+}
+
+.welcome__message span{
+    background-color: #fc00ff;
+    padding: 0.2em 0.6em;
+    color: white;
+    border-radius: 16px;
 }

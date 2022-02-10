@@ -3,7 +3,7 @@ const path = require('path');
 const flash = require('connect-flash'); 
 const session = require('express-session'); 
 
-
+//Requiere passport e inicializa la configuración
 const passport = require('passport');
 require('./libs/passport'); 
 
@@ -25,6 +25,7 @@ app.use(
 );
 app.use(express.json());
 
+//Sesión que se usa con passport
 app.use(session({
     secret: 'process.env.SE_SECRET',
     resave: false,
@@ -34,6 +35,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+//Flash para enviar mensajes de errores o success
 app.use(flash());
 
 // -- Global variables --

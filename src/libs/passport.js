@@ -44,7 +44,6 @@ passport.use(
 
             }
 
-            return done(null, newUser); 
         }
     )
 );
@@ -67,7 +66,7 @@ passport.use('local.login', new LocalStrategy({
         if(passwordIsValid){
             done(null, user); 
         }else{
-            done(null, false, req.flash('message','ERROR: Incorrect password')); //false xq no se puede mostrar
+            done(null, false, req.flash('message','ERROR: Incorrect password')); 
         }
 
     }else{
