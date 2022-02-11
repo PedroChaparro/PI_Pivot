@@ -1,7 +1,11 @@
 # PI_PIVOT
 Repository created for upload Pivot´s development files. 
 
-## INSTALLATION
+## WEB PAGE
+
+Solution is hosted on [HEROKU](https://pivot-proyecto-integrador.herokuapp.com/signup)
+
+## LOCAL INSTALLATION
 
 1. Clone the repository: 
 
